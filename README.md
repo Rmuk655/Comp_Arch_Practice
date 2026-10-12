@@ -17,7 +17,7 @@ memory-mapped LED control and software floating-point arithmetic. The programs a
 | Floating-point arithmetic | `Practice Assignments/Lab 6 Optional/` | Floating-point operations on IEEE-754 pairs with configurable exponent and mantissa widths (`main.s`) |
 | Hardware design practice | `Practice Assignments/Lab 3 Hardware Optional/` | Statement for building an FPU in hardware |
 | Past problem sets | `Practice Assignments/HW 1 2022 Practice/`, `HW 2 2024 Practice/` | Instruction-level and memory-behaviour reasoning problems |
-| Ripes test programs | `Test files/` | Small `.s` programs (e.g. `Add10Sub5.s`, `2024 Lab 1.s`) and the saved problem pages (`.html`) |
+| Ripes test programs | `Test files/` | Small `.s` programs (e.g. `Add10Sub5.s`, `2024 Lab 1.s`) and the saved problem pages (`.html`). `2024 Lab 2.s` is an unfinished early draft of the GCD lab and does not terminate; the working solution is in `Lab Assignments/Assignment 2/` |
 | Floating-point precision demo | `Practice Assignments/Random codes/Code1.c` | Shows rounding error in `float` arithmetic (`x + x - x`, `x * x / x` with `x = 0.1f`) printed to 20 digits |
 
 ## Running
@@ -25,6 +25,12 @@ memory-mapped LED control and software floating-point arithmetic. The programs a
 Open any `.s` file in Ripes (desktop app or the [web version](https://ripes.me/)), assemble it, and step or
 run. Registers and memory update as the program executes; the processor model can be switched between
 single-cycle and pipelined to see hazards.
+
+Headless runs also work with the Ripes CLI, which reports cycles, retired instructions and registers:
+
+```bash
+Ripes --mode cli --src "Lab Assignments/Assignment 2/CS24BTECH11036.s" -t asm --proc RV64_SS --cycles --iret --regs
+```
 
 For the C scratch code:
 
