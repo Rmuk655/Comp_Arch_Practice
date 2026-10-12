@@ -17,8 +17,8 @@ memory-mapped LED control and software floating-point arithmetic. The programs a
 | Floating-point arithmetic | `Practice Assignments/Lab 6 Optional/` | Floating-point operations on IEEE-754 pairs with configurable exponent and mantissa widths (`main.s`) |
 | Hardware design practice | `Practice Assignments/Lab 3 Hardware Optional/` | Statement for building an FPU in hardware |
 | Past problem sets | `Practice Assignments/HW 1 2022 Practice/`, `HW 2 2024 Practice/` | Instruction-level and memory-behaviour reasoning problems |
-| Ripes test programs | `Test files/` | Small `.s` programs (e.g. `Add10Sub5.s`, `2024 Lab 1.s`) and saved HTML problem pages |
-| C scratch code | `Practice Assignments/Random codes/Code1.c` | Small C program |
+| Ripes test programs | `Test files/` | Small `.s` programs (e.g. `Add10Sub5.s`, `2024 Lab 1.s`) and the saved problem pages (`.html`) |
+| Floating-point precision demo | `Practice Assignments/Random codes/Code1.c` | Shows rounding error in `float` arithmetic (`x + x - x`, `x * x / x` with `x = 0.1f`) printed to 20 digits |
 
 ## Running
 
@@ -29,7 +29,7 @@ single-cycle and pipelined to see hazards.
 For the C scratch code:
 
 ```bash
-gcc "Practice Assignments/Random codes/Code1.c" -o code1 && ./code1
+gcc "Practice Assignments/Random codes/Code1.c" -o code1 && ./code1   # prints y = 0.10000000149011611938, z = 0.10000000894069671631
 ```
 
 ## License
