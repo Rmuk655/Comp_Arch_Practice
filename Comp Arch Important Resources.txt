@@ -1,0 +1,53 @@
+Computer Architecture Important Resources
+1)Comp Arch course details, schedule doc: https://docs.google.com/document/d/1dQmjsXaMk_5chI2AjyesMyMxf4DYrRxeM1ZqYy-BLzw/edit?tab=t.0#heading=h.at04z7xqki79
+1)Float to hex converter website: https://gregstoll.com/~gregstoll/floattohex/
+2)Reference book for floating point: https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/f.html
+3)Online compiler for understanding how different programming languages work: https://godbolt.org/
+4)Mentimeter links:
+Number Systems: https://www.mentimeter.com/app/presentation/aledm21ik2hqamgzc7ih3m9dry6j9484/view?question=czb4bpp15sdq&utm_source=govote&utm_medium=button&discuss-results=true
+Digital logic: https://www.mentimeter.com/app/presentation/alufvpgqq1p7aciap25hzoptvu6rt3ie/view?question=nafp5jhr1h2x&utm_source=govote&utm_medium=button&discuss-results=true
+Processor Design 1: https://www.mentimeter.com/app/presentation/alonpnzb24xqvay1mw15wht3hq2nh6tb/view?question=c9ydjs45cfab&utm_source=govote&utm_medium=button&discuss-results=true
+Pipeline Hazards: https://www.mentimeter.com/app/presentation/aldn6cwzt6n17gzccou7m7k6hhirbp5b/view?question=4acxq9cathxt&utm_source=govote&utm_medium=button&discuss-results=true
+Caches: https://www.mentimeter.com/app/presentation/aljn6v1y3a1zg5nz8xjm5oz5tp7doqe5/view?question=c6ugnx1emozx&utm_source=govote&utm_medium=button
+
+Grades
+Quizzes (10.33/15)
+16/20*3 = 2.4
+14.2/20*3 = 2.13
+14/20*3 = 2.1
+10.5/15*3 = 2.1
+8/15*3 = 1.6
+Total: 10.33/15
+
+Homeworks (5.568/6)
+20/20*1 = 1
+19/20*1 = 0.95
+24.5/25*1 = 0.98
+16/20*1 = 0.8
+20/20*2 = 2
+Total: 5.73/6
+
+Lab Assignments (10.44/11)
+9/10*2 = 1.8
+10/10*3 = 3
+9.28/10*5 = 4.64
+10/10*1 = 1
+10.44/11
+
+Midsem(14.5714/17)
+30/35*17 = 14.5714/18
+
+Endsem(17.0833/25)
+23.5/30*12 = 9.4/12
+17.5/30*14 = 8.166/14
+41/60 = 17.5667/25
+17.5667/25
+
+Project (/20)
+
+Class Participation(/5)
+3/3
+/2
+
+Total: 61.6381/78
+Given: 61.5/78

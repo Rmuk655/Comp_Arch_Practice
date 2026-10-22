@@ -1,0 +1,425 @@
+RIPES Codes
+Sample practice
+1)Add 10 numbers, subtract 5 numbers
+main:
+    addi x4, x0, 4
+    addi x5, x0, 4
+    addi x6, x0, 4
+    addi x7, x0, 4
+    addi x8, x0, 4
+    addi x9, x0, 4   
+    addi x10, x0, 4
+    addi x11, x0, 4
+    addi x12, x0, 4
+    addi x13, x0, 4
+    addi x14, x0, 4
+    addi x15, x0, 4
+    addi x16, x0, 4
+    addi x17, x0, 4
+    addi x18, x0, 4
+    add x19, x0, x4
+    add x19, x19, x5
+    add x19, x19, x6
+    add x19, x19, x7
+    add x19, x19, x8
+    add x19, x19, x9
+    add x19, x19, x10
+    add x19, x19, x11
+    add x19, x19, x12
+    add x19, x19, x13
+    sub x19, x19, x14
+    sub x19, x19, x15
+    sub x19, x19, x16
+    sub x19, x19, x17
+    sub x19, x19, x18
+
+2)Multiply 2 numbers
+main:
+    addi x4, x0, 4
+    addi x5, x0, 5
+    addi x6, x0, 1
+    addi x7, x4, 0
+    bne x5, x6, Loop
+Loop:
+    add x4, x4, x7
+    sub x5, x5, x6
+    bne x5, x6, Loop
+
+3)Multiply 2 complex numbers 
+main:
+    addi x4, x0, 4
+    addi x5, x0, 5
+    addi x6, x0, 3
+    addi x7, x0, 4
+    addi x8, x0, 1
+    addi x9, x4, 0
+    addi x10, x5, 0
+    addi x11, x6, 0
+    addi x12, x7, 0
+    addi x13, x4, 0
+    addi x14, x5, 0
+    addi x15, x6, 0
+    addi x16, x7, 0
+    bne x9, x8, Loop1
+    bne x10, x8, Loop2
+    bne x11, x8, Loop3
+    bne x12, x8, Loop4
+Loop1:
+    add x15, x15, x6
+    sub x9, x9, x8
+    bne x9, x8, Loop1
+Loop2:
+    add x16, x16, x7
+    sub x10, x10, x8
+    bne x10, x8, Loop2
+Loop3:
+    add x14, x14, x5
+    sub x11, x11, x8
+    bne x11, x8, Loop3
+Loop4:
+    add x13, x13, x4
+    sub x12, x12, x8
+    bne x12, x8, Loop4
+end:
+    sub x17, x15, x16
+    add x18, x13, x14
+
+2022
+HW 2 (https://docs.google.com/document/d/1FHgsYt9Ao-44Eb8O5NjqbGxpHFjJumZmqFa54xV4moQ/edit?tab=t.0)
+1)
+addi x15, x22, -4
+xor x23, x8, x9
+beq x7, x1, 240
+sd x6, 24(x9)
+jal x8, -10180
+
+2)
+li    t0, -1
+li    t0, 0xFFFFFFFF 
+li    t0, 223
+li    t0, 1234
+li    t0, 0x123456000
+
+3)
+.data
+.dword 0x39933939a55aa5a5
+.dword 0xa55aa5a539933939
+.text
+    lui x1, 0x10000
+main:
+    lhu x3, 0(x1)
+    lh x3, 0(x1)
+    lh x3, 2(x1)
+    ld x3, 0(x1)
+    ld x3, 4(x1)
+    lbu x3, 7(x1)
+    lb x3, 7(x1)
+    lb x3, 6(x1)
+
+Lab 1a (https://docs.google.com/document/d/1m0RQ-tiXgExgKTLUAcRoxoXUklFBdSBJAZSHUXfVK8o/edit?tab=t.0)
+
+1)
+.data
+#The following line defines the value present in the memory. 
+#We would use different values in our evaluation and 
+#hence you should try for different values in your testing.
+.dword 25
+
+.text
+    #The following line initializes register x3 with 0x10000000 
+    #so that you can use x3 for referencing various memory locations. 
+    lui x3, 0x10000
+    #your code starts here    
+    
+main:
+    ld x11, 0(x3)
+    addi x12, x0, 5
+    addi x13, x0, 1
+    addi x14, x11, 0
+    bne x12, x13, Loop
+Loop:
+    add x11, x11, x14
+    sub x12, x12, x13
+    bne x12, x13, Loop
+   #    WRITE YOUR CODE HERE
+ 
+    #The final result (sum) should be in register x11
+
+Lab 1b (https://docs.google.com/document/d/1E6iq3H92-YVq6N2k7Cy80cQKmnjUwb9BcvBzFoWocOY/edit?tab=t.0)
+
+1)
+.data
+#The following line defines the 10 values present in the memory.
+# We would use different values in our evaluation and
+# hence you should try various combinations of these values in your testing.
+.dword 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009
+#(dword stands for doubleword)
+
+.text
+    #The following line initializes register x3 with 0x10000000 
+    #so that you can use x3 for referencing various memory locations. 
+    lui x3, 0x10000
+    #your code starts here
+    lw x11, 0(x3)
+    lw x12, 8(x3)   
+    lw x13, 16(x3)
+    lw x14, 24(x3)
+    lw x15, 32(x3)
+    lw x16, 40(x3)
+    lw x17, 48(x3)
+    lw x18, 56(x3)
+    lw x19, 64(x3)
+    lw x20, 72(x3) 
+    add x10, x10, x11
+    add x10, x10, x12
+    add x10, x10, x13
+    add x10, x10, x14
+    add x10, x10, x15
+    add x10, x10, x16
+    add x10, x10, x17
+    add x10, x10, x18
+    add x10, x10, x19
+    add x10, x10, x20
+   #    WRITE YOUR CODE HERE
+ 
+    
+    #The final result (sum) should be in register x10
+
+Lab 2a
+
+1)Printing nth Fibonacci number
+
+.data
+.dword 6
+
+.text
+    lui x3, 0x10000
+    addi x11, x11, 1
+    addi x12, x12, 1
+    ld x13, 0(x3)
+    addi x14, x0, 2
+    lui x4, 0x10000
+    addi x4, x4, 256
+    sd x11, 0(x4)
+    addi x4, x4, 8
+    sd x12, 0(x4)
+    bgt x13, x14, loop
+loop:
+    add x15, x11, x12
+    mv x11, x12
+    mv x12, x15
+    addi x13, x13, -1
+    addi x4, x4, 8
+    sd x12, 0(x4)
+    bgt x13, x14, loop
+
+2)Printing the sum of n Fibonacci numbers
+
+.data
+.dword 6
+
+.text
+    lui x3, 0x10000
+    addi x11, x11, 1
+    addi x12, x12, 1
+    add x16, x11, x12
+    ld x13, 0(x3)
+    addi x14, x0, 2
+    lui x4, 0x10000
+    addi x4, x4, 256
+    sd x11, 0(x4)
+    addi x4, x4, 8
+    sd x12, 0(x4)
+    bgt x13, x14, loop
+loop:
+    add x15, x11, x12
+    mv x11, x12
+    mv x12, x15
+    add x16, x16, x12
+    addi x13, x13, -1
+    addi x4, x4, 8
+    sd x12, 0(x4)
+    bgt x13, x14, loop
+
+Lab 2b
+
+1 and 2)n square numbers and the sum of the first n square numbers
+.data
+.dword 6
+
+.text
+    lui x3, 0x10000
+    addi x11, x11, 1
+    addi x12, x12, 1
+    ld x13, 0(x3)
+    addi x14, x0, 1
+    add x16, x16, x11
+    lui x4, 0x10000
+    addi x4, x4, 256
+    sd x11, 0(x4)
+    bgt x13, x14, loop
+loop:
+    addi x12, x12, 2
+    add x15, x11, x12
+    mv x11, x15
+    add x16, x16, x11
+    addi x13, x13, -1
+    addi x4, x4, 8
+    sd x11, 0(x4)
+    bgt x13, x14, loop
+
+Lab 3
+
+1)Factorial without using MULT
+
+.data
+.dword 5
+.text
+main:
+    lui x3, 0x10000
+    ld x4, 0(x3)
+    addi x5, x0, 1
+    beq x4, x0, answer0
+    beq x4, x5, answer1
+    bne x4, x5, mult
+    addi x9, x0, 0
+    addi x10, x0, 0
+mult:
+    addi x6, x0, 1
+    addi x7, x4, 0
+    addi x8, x7, -1
+    add x10, x10, x4
+    add x9, x9, x10
+    bne x8, x6, Loop
+    beq x8, x6, answer
+Loop:
+    add x9, x10, x9
+    addi x8, x8, -1
+    bne x8, x6, Loop
+mult2:
+    addi x4, x4, -1
+    sub x10, x9, x4
+    sub x9, x9, x9
+    bne x4, x5, mult
+answer0:
+    sub x9, x9, x9
+    addi x9, x9, 1
+    sd x9, 16(x3)
+    beq x9, x0, answer
+answer1:
+    sub x9, x9, x9
+    addi x9, x9, 1
+    sd x9, 16(x3)
+answer:
+    sd x9, 16(x3)
+
+Lab 5
+
+1)Matrix Multiplication
+
+.data
+L1: .word 0 #This location indicates the error of the result. 
+#It is 0 if no error else 1.
+.word 2, 3        #x and y dimensions of MATRIX-1
+.word 1, 2, 3, 4, 5, 6
+.word 3, 2        #x and y dimensions of MATRIX-2
+.word 1, 2, 3, 4, 5, 6
+.word 0, 0        #values to be written by the program
+.word 0, 0, 0, 0
+.text
+main:
+    la x3, L1
+    lw x10, 4(x3)
+    lw x11, 8(x3)
+    mul x12, x10, x11
+    addi x13, x13, 4
+    mul x14, x12, x13
+    lw x15, x14(x13)
+
+2024
+HW 1
+
+1)
+a)addi x8, x5, -5
+b)slli x5, x3, 3
+c)add x19, x19, x10
+d)addi x15, x15, 1
+e)srai x9, x15, 2
+f)li x12, 24
+
+2)
+a)ld x6, 160(x5)
+addi x6, x6, 100
+ld x6, 96(x5)
+b)ld x6, 160(x5)
+addi x6, x6, 1
+ld x6, 160(x5)
+c)ld x6, 40(x5)
+ld x7, 96(x5)
+ld x6, 96(x5)
+ld x7, 40(x5)
+d)ld x6, 32(x5)
+
+ld x6, 32(x5)
+e)ld x6, 16(x5)
+
+ld x6, 16(x5)
+
+3)
+a)00010111
+b)-1 + 2^8 = 255
+11111111
+c)Conceptual, cannot be represented as signed 8 bit integer.
+d)10000000 = -128
+
+4)
+a)(2^7 + 2^6 + 2^4 + 2^2) - 2^8 = -44
+b)2^5+2^3+2+1 = 43
+c)(2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2) - 2^8 = -2
+
+Lab 1
+
+1)
+.data
+#The following line defines the 15 values present in the memory.
+# We would use different values in our evaluation and
+# hence you should try various combinations of these values in your testing.
+.dword 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 523, 524, 525, 533, 512
+#(dword stands for doubleword)
+
+.text
+    #The following line initializes register x3 with 0x10000000 
+    #so that you can use x3 for referencing various memory locations. 
+    lui x3, 0x10000
+    #your code starts here    
+    ld x4, 0(x3)
+    ld x5, 8(x3)
+    ld x6, 16(x3)
+    ld x7, 24(x3)
+    ld x8, 32(x3)
+    ld x9, 40(x3)
+    ld x11, 48(x3)
+    ld x12, 56(x3)
+    ld x13, 64(x3)
+    ld x14, 72(x3)
+    ld x15, 80(x3)
+    ld x16, 88(x3)
+    ld x17, 96(x3)
+    ld x18, 104(x3)
+    ld x19, 112(x3)
+    add x10, x0, x4
+    add x10, x10, x5
+    add x10, x10, x6
+    add x10, x10, x7
+    add x10, x10, x8
+    add x10, x10, x9
+    add x10, x10, x11
+    add x10, x10, x12
+    add x10, x10, x13
+    add x10, x10, x14
+    sub x10, x10, x15
+    sub x10, x10, x16
+    sub x10, x10, x17
+    sub x10, x10, x18
+    sub x10, x10, x19
+    #The final result should be in register x10

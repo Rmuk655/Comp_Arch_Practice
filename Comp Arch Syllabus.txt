@@ -1,0 +1,73 @@
+Topics covered as per book chapters (Hennessy and Patterson, RISC-V edition). This can be considered as the reference syllabus for exams.
+Chapter-1: Computer Abstractions and Technology - Done
+1.1 Introduction - Done
+1.2 Eight Great Ideas in Computer Architecture - Done
+1.3 Below Your Program - Done
+1.4 Under the Covers - Done
+1.6 Performance - Done
+1.10 Fallacies and Pitfalls - Done
+1.11 Concluding Remarks - Done
+1.13 Exercises
+
+
+Chapter-2: Instructions: Language of the Computer - Done
+2.1 Introduction - Done
+2.2 Operations of the Computer - Done
+2.3 Operands of the Computer Hardware - Done
+2.4 Signed and Unsigned Numbers - Done
+2.5 Representing Instructions in the Computer - Done
+2.6 Logical Operations - Done
+2.7 Instructions for Making Decisions - Done
+2.8 Supporting Procedures in Computer Hardware - Done
+2.10 RISC-V Addressing for Wide Immediates and Addresses - Done
+2.13 A C Sort Example to Put it All Together - 
+2.14 Arrays versus Pointers - 
+2.18 Real Stuff: The Rest of the RISC-V Instruction Set - 
+2.19 Fallacies and Pitfalls - 
+2.20 Concluding Remarks - 
+2.22 Exercises
+
+
+Chapter-3: Arithmetic for Computers
+3.1 Introduction
+3.2 Addition and Subtraction
+3.3 Multiplication
+3.4 Division
+3.5 Floating Point
+3.6 Parallelism and Computer Arithmetic: Subword Parallelism (TBD after break)
+3.10 Concluding Remarks
+3.12 Exercises
+
+Chapter-4: The Processor
+4.1 Introduction
+4.2 Logic Design Conventions
+4.3 Building a Datapath
+4.4 A Simple Implementation Scheme
+4.5 An Overview of Pipelining
+4.6 Pipelined Datapath and Control
+4.7 Data Hazards: Forwarding versus Stalling
+4.8 Control Hazards
+4.9 Exceptions - only the control hazard related aspects
+4.14 Fallacies and Pitfalls
+4.15 Concluding Remarks
+4.17 Exercises
+
+Chapter-5: Large and Fast: Exploiting Memory Hierarchy
+5.1 Introduction
+5.2 Memory Technologies
+5.3 The Basics of Caches
+5.4 Measuring and Improving Cache Performance
+5.8 A Common Framework for Memory Hierarchy
+5.10 Parallelism and Memory Hierarchy: Cache Coherence
+5.13 Real Stuff: The ARM Cortex-A53 and Intel Core i7 Memory Hierarchies
+5.16 Fallacies and Pitfalls
+5.17 Concluding Remarks
+5.19 Exercises
+
+
+IO Handling
+Sections 1.4, 4.9, 5.2, 5.5, 5.11, and 6.9.
+Basic computer architecture, Smruti Ranjan Sarangi, Chapter-12. https://www.dropbox.com/s/q0h0ljmqxporbo5/Chapter-12.pdf?dl=0
+
+Multi-issue pipeline
+Section 4.10
