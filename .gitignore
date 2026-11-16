@@ -1,3 +1,10 @@
 *.exe
 *.o
 *.out
+
+# Local tool and editor state
+.claude/
+.graphify/
+graphify-out/
+.vscode/
+.tools/
